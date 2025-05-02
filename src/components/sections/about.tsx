@@ -1,6 +1,4 @@
-import { Divider } from "@mui/material";
-
-import { Box, Grid, Paper, Typography} from "@mui/material";
+import { Divider, Paper, Typography, Box, useMediaQuery } from "@mui/material";
 
 const features = [
   {
@@ -22,14 +20,15 @@ const features = [
 ];
 
 const AboutSection = () => {
+  const isSmallScreen = useMediaQuery("(max-width:1000px)");
   return (
     <div
       style={{
         background: `
-            radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
-            radial-gradient(circle at 90% 35%, #FF950030, transparent 200px),
-            #ffffff
-          `,
+          radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
+          radial-gradient(circle at 90% 35%, #FF950030, transparent 200px),
+          #ffffff
+        `,
         backgroundRepeat: "repeat",
         backgroundSize: "cover",
       }}
@@ -37,223 +36,235 @@ const AboutSection = () => {
       <Box
         sx={{
           backgroundColor: "#0F0F0F",
-          mx: 15,
+          mx: { xs: 2, sm: 6, md: 15 },
           my: 8,
-          py: 5,
-          px: 2,
+          py: { xs: 4, sm: 8, md: 8 },
+          px: { xs: 4, sm: 4, md: 8 },
           borderRadius: 4,
         }}
       >
-        <Grid
-          container
-          spacing={4}
-          alignItems="flex-start"
-          justifyContent="center"
+        {/* Header and Description */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: 3,
+          }}
         >
-          <Grid size={{ xs: 12, sm: 6, md: 9 }} display={"flex"} gap={10}>
-            <Typography
-              variant="h3"
+          <Typography
+            variant="h3"
+            sx={{
+              fontWeight: 700,
+              background: "linear-gradient(90deg, #E9FF9D 0%, #FFFFFE 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            What is Mutual Fund Wala
+          </Typography>
+
+          <Box sx={{ px: { xs: 0, sm: 4, md: 8 } }}>
+            <Typography variant="body1" color="#CCCCCC">
+              MutualFund Wala is a household name in mutual fund investments,
+              committed to empowering every investor, regardless of risk
+              appetite or investment size, to build wealth and achieve financial
+              freedom.
+            </Typography>
+            <Box
               sx={{
-                fontWeight: 700,
-                background: "linear-gradient(90deg, #C4FF00, #FFFFFF)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                mb: 2,
+                mt: 6,
+                display: "grid",
+                flexWrap: "nowrap",
+                gridTemplateColumns: {
+                  xs: "repeat(3, auto)",
+                  sm: "auto",
+                  md: "repeat(7, auto)",
+                },
+                gap: 2,
+                color: "#AAA9A9",
+                fontSize: "14px",
+                lineHeight: 1,
               }}
             >
-              What is Mutual Fund Wala
-            </Typography>
-            <Box>
-              <Typography variant="body1" color="#CCCCCC" mb={4}>
-                MutualFund Wala is a household name in mutual fund investments,
-                committed to empowering every investor, regardless of risk
-                appetite or investment size, to build wealth and achieve
-                financial freedom.
-              </Typography>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <img src="assets/AMFI.svg" alt="AMFI" width="36" height="36" />
+                <Box sx={{ ml: 1 }}>
+                  <Typography sx={{ fontSize: "14px" }}>AMFI</Typography>
+                  <Typography sx={{ fontSize: "14px" }}>Registered</Typography>
+                </Box>
+              </Box>
 
-              <Box
+              <Divider
+                orientation="vertical"
+                flexItem
                 sx={{
-                  mt: "47px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "#fff",
-                  flexWrap: "no-wrap",
-                  gap: 2,
-                  maxWidth: "100%",
+                  borderColor: "#555",
+                  borderStyle: "dashed",
                 }}
-              >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src="assets/AMFI.svg"
-                    alt="AMFI"
-                    width="36"
-                    height="36"
-                  />
-                  <Box sx={{ ml: 1 }}>
-                    <Typography sx={{ fontSize: "14px" }}>AMFI</Typography>
-                    <Typography sx={{ fontSize: "14px" }}>
-                      Registered
-                    </Typography>
-                  </Box>
-                </Box>
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{ borderColor: "#555" }}
-                />
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      position: "relative",
-                      width: "50px",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      src="assets/man.svg"
-                      alt="Investor1"
-                      width="32"
-                      height="32"
-                      style={{
-                        borderRadius: "50%",
-                        position: "absolute",
-                        left: 0,
-                      }}
-                    />
-                    <img
-                      src="assets/girl.svg"
-                      alt="Investor2"
-                      width="32"
-                      height="32"
-                      style={{
-                        borderRadius: "50%",
-                        position: "absolute",
-                        left: 18,
-                      }}
-                    />
-                  </Box>
-                  <Box sx={{ ml: 1 }}>
-                    <Typography sx={{ fontSize: "14px" }}>8,000+</Typography>
-                    <Typography sx={{ fontSize: "14px" }}>Investors</Typography>
-                  </Box>
-                </Box>
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{ borderColor: "#555" }}
-                />
+              />
 
-                <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "50px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
                   <img
-                    src="assets/bag.svg"
-                    alt="Legacy"
-                    width="36"
-                    height="36"
-                  />
-                  <Box sx={{ ml: 1 }}>
-                    <Typography sx={{ fontSize: "14px" }}>20+ Years</Typography>
-                    <Typography sx={{ fontSize: "14px" }}>of Legacy</Typography>
-                  </Box>
-                </Box>
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{ borderColor: "#555" }}
-                />
-
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <Box
-                    sx={{
-                      position: "relative",
-                      width: "50px",
-                      display: "flex",
-                      alignItems: "center",
+                    src="assets/man.svg"
+                    alt="Investor1"
+                    width="32"
+                    height="32"
+                    style={{
+                      borderRadius: "50%",
+                      position: "absolute",
+                      left: 0,
                     }}
-                  >
-                    <img
-                      src="assets/sbi.svg"
-                      alt="Investor1"
-                      width="32"
-                      height="32"
-                      style={{
-                        borderRadius: "50%",
-                        position: "absolute",
-                        left: 0,
-                      }}
-                    />
-                    <img
-                      src="assets/hdfc.svg"
-                      alt="Investor2"
-                      width="32"
-                      height="32"
-                      style={{
-                        borderRadius: "50%",
-                        position: "absolute",
-                        left: 18,
-                      }}
-                    />
-                  </Box>
-                  <Box sx={{ ml: 1 }}>
-                    <Typography sx={{ fontSize: "14px" }}>Top 35</Typography>
-                    <Typography sx={{ fontSize: "14px" }}>AMCs</Typography>
-                  </Box>
+                  />
+                  <img
+                    src="assets/girl.svg"
+                    alt="Investor2"
+                    width="32"
+                    height="32"
+                    style={{
+                      borderRadius: "50%",
+                      position: "absolute",
+                      left: 18,
+                    }}
+                  />
+                </Box>
+                <Box sx={{ ml: 1 }}>
+                  <Typography sx={{ fontSize: "14px" }}>8,000+</Typography>
+                  <Typography sx={{ fontSize: "14px" }}>Investors</Typography>
+                </Box>
+              </Box>
+
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{
+                  borderColor: "#555",
+                  display: { xs: "none", sm: "block" },
+                  borderStyle: "dashed",
+                }}
+              />
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <img src="assets/bag.svg" alt="Legacy" width="36" height="36" />
+                <Box sx={{ ml: 1 }}>
+                  <Typography sx={{ fontSize: "14px" }}>20+ Years</Typography>
+                  <Typography sx={{ fontSize: "14px" }}>of Legacy</Typography>
+                </Box>
+              </Box>
+
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{
+                  borderColor: "#555",
+                  borderStyle: "dashed",
+                }}
+              />
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "50px",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    src="assets/sbi.svg"
+                    alt="Investor1"
+                    width="32"
+                    height="32"
+                    style={{
+                      borderRadius: "50%",
+                      position: "absolute",
+                      left: 0,
+                    }}
+                  />
+                  <img
+                    src="assets/hdfc.svg"
+                    alt="Investor2"
+                    width="32"
+                    height="32"
+                    style={{
+                      borderRadius: "50%",
+                      position: "absolute",
+                      left: 18,
+                    }}
+                  />
+                </Box>
+                <Box sx={{ ml: 1 }}>
+                  <Typography sx={{ fontSize: "14px" }}>Top 35</Typography>
+                  <Typography sx={{ fontSize: "14px" }}>AMCs</Typography>
                 </Box>
               </Box>
             </Box>
-          </Grid>
+          </Box>
+        </Box>
 
-          <Grid container spacing={3}>
+        {!isSmallScreen && (
+          <Box
+            sx={{
+              mt: 6,
+              display: "flex",
+              flexWrap: "nowrap",
+              gap: 3,
+              justifyContent: "center",
+            }}
+          >
             {features.map((item, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
-                <Paper
-                  elevation={0}
+              <Paper
+                key={index}
+                elevation={0}
+                sx={{
+                  backgroundColor: "#1E1D1D",
+                  border: "1px solid #0C0C0C",
+                  borderRadius: 3,
+                  textAlign: "center",
+                  padding: 3,
+                  width: { xs: "100%", sm: "45%", md: "230px" },
+                  minHeight: "188px",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
                   sx={{
-                    backgroundColor: "#1E1D1D",
-                    border: "1px solid #0C0C0C",
-                    borderRadius: 3,
-                    textAlign: "center",
-                    padding: 3,
-                    height: "188",
-                    width: "230",
+                    width: 64,
+                    height: 64,
+                    borderRadius: "50%",
+                    backgroundColor: "#D1FF00",
                     display: "flex",
-                    flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
+                    mb: 2,
                   }}
                 >
-                  <Box
-                    sx={{
-                      width: 64,
-                      height: 64,
-                      borderRadius: "50%",
-                      backgroundColor: "#D1FF00",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      mb: 2,
-                    }}
-                  >
-                    <img
-                      src={item.icon}
-                      alt="icon"
-                      style={{ width: 32, height: 32, color:"black" }}
-                    />
-                  </Box>
-                  <Typography
-                    variant="body1"
-                    fontWeight="600"
-                    color="white"
-                    sx={{ lineHeight: 1.4, fontSize: "16px" }}
-                  >
-                    {item.text}
-                  </Typography>
-                </Paper>
-              </Grid>
+                  <img
+                    src={item.icon}
+                    alt="icon"
+                    style={{ width: 32, height: 32 }}
+                  />
+                </Box>
+                <Typography
+                  variant="body1"
+                  fontWeight="600"
+                  color="white"
+                  sx={{ lineHeight: 1.4, fontSize: "16px" }}
+                >
+                  {item.text}
+                </Typography>
+              </Paper>
             ))}
-          </Grid>
-        </Grid>
+          </Box>
+        )}
       </Box>
     </div>
   );

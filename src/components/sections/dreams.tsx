@@ -1,5 +1,5 @@
 
-import { Box, Typography, Button, Grid, Paper } from "@mui/material";
+import { Box, Typography, Button, Grid, Paper,useMediaQuery } from "@mui/material";
 
 const goals = [
   {
@@ -49,11 +49,13 @@ function darkenHex(hex: string, amount: number = 30) {
     .join("")}`;
 }
 function Dreams() {
+  const isSmallScreen = useMediaQuery("(max-width:1000px)");
   return (
     <Box
       textAlign="center"
-      py={12}
-      px={20}
+      pt={12}
+      pb={4}
+      px={{ xs: 4, sm: 8, md: 20 }}
       style={{
         background: `
             radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
@@ -78,9 +80,29 @@ function Dreams() {
         Investments
       </Typography>
 
-      <Grid container spacing={3} justifyContent="center">
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          overflowX: isSmallScreen ? "auto" : "visible",
+          flexWrap: isSmallScreen ? "nowrap" : "wrap",
+          justifyContent: "center",
+          gap: 3,
+          py: 2,
+          px: 1,
+          scrollSnapType: isSmallScreen ? "x mandatory" : "none",
+        }}
+      >
         {goals.map((goal, idx) => (
-          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
+          <Box
+            key={idx}
+            sx={{
+              scrollSnapAlign: isSmallScreen ? "start" : "unset",
+              minWidth: isSmallScreen ? "240px" : "auto",
+              flex: "0 0 auto",
+              width: isSmallScreen ? "auto" : { xs: "100%", sm: "47%", md: "22%" },
+            }}
+          >
             <Paper
               elevation={0}
               sx={{
@@ -103,11 +125,7 @@ function Dreams() {
                   margin: "0 auto 16px",
                 }}
               >
-                <img
-                  src={goal.img}
-                  alt={goal.title}
-                  style={{ width: 32, height: 32 }}
-                />
+                <img src={goal.img} alt={goal.title} style={{ width: 32, height: 32 }} />
               </Box>
               <Typography variant="body1" fontWeight="600">
                 {goal.title}
@@ -116,9 +134,9 @@ function Dreams() {
                 {goal.subtitle}
               </Typography>
             </Paper>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       <Button
         variant="contained"
@@ -131,6 +149,7 @@ function Dreams() {
           py: 1.1,
           textTransform: "none",
           borderRadius: "6px",
+          flexWrap:"nowrap"
         }}
       >
         Start Investing Today
