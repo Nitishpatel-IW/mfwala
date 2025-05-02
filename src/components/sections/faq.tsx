@@ -4,7 +4,7 @@ const faqData = [
   {
     question: "Is It Safe To Invest In Mutual Funds Through MutualFund Wala?",
     answer: `Yes. MutualFund Wala is an AMFI-registered platform that follows all SEBI regulations. 
-    Your investments are processed through secure payment gateways and routed directly to the fund houses. 
+    Your investmentsare processed through secure payment gateways and routed directly to the fund houses. 
     We don’t hold your money—your investments are always in your name and stay under your control.`,
   },
   {
