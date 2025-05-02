@@ -24,7 +24,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <Box sx={{ backgroundColor: "#000", minHeight: "100vh", color: "#fff" }}>
+      <Box sx={{ backgroundColor: "#000", minHeight: "100vh", color: "#fff" }} >
         <AppBar position="static" color="transparent" elevation={0}>
           <Toolbar
             sx={{
@@ -35,7 +35,7 @@ const LandingPage = () => {
           >
             <Box sx={{ display: "flex", gap: 3 }}>
               <img
-                src="../../assets/Group 1000005422.svg"
+                src="assets/Group 1000005422.svg"
                 alt="logo"
                 style={{ maxHeight: "500px", borderRadius: "20px" }}
               />
@@ -142,7 +142,7 @@ const LandingPage = () => {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="../../assets/AMFI.svg"
+                    src="assets/AMFI.svg"
                     alt="AMFI"
                     width="36"
                     height="36"
@@ -169,7 +169,7 @@ const LandingPage = () => {
                     }}
                   >
                     <img
-                      src="../../assets/man.svg"
+                      src="assets/man.svg"
                       alt="Investor1"
                       width="32"
                       height="32"
@@ -180,7 +180,7 @@ const LandingPage = () => {
                       }}
                     />
                     <img
-                      src="../../assets/girl.svg"
+                      src="assets/girl.svg"
                       alt="Investor2"
                       width="32"
                       height="32"
@@ -204,7 +204,7 @@ const LandingPage = () => {
 
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="../../assets/bag.svg"
+                    src="assets/bag.svg"
                     alt="Legacy"
                     width="36"
                     height="36"
@@ -230,7 +230,7 @@ const LandingPage = () => {
                     }}
                   >
                     <img
-                      src="../../assets/sbi.svg"
+                      src="assets/sbi.svg"
                       alt="Investor1"
                       width="32"
                       height="32"
@@ -241,7 +241,7 @@ const LandingPage = () => {
                       }}
                     />
                     <img
-                      src="../../assets/hdfc.svg"
+                      src="assets/hdfc.svg"
                       alt="Investor2"
                       width="32"
                       height="32"
@@ -262,7 +262,7 @@ const LandingPage = () => {
             <Grid size={{ xs: 12, md: 6 }}>
               <Box>
                 <img
-                  src="../../assets/thumbUp.svg"
+                  src="assets/thumbUp.svg"
                   alt="Thumbs Up Guy"
                   style={{
                     maxWidth: "100%",

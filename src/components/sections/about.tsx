@@ -4,19 +4,19 @@ import { Box, Grid, Paper, Typography} from "@mui/material";
 
 const features = [
   {
-    icon: "/assets/icons/goal.png",
+    icon: "assets/rupee.svg",
     text: "Goal-based investing",
   },
   {
-    icon: "/assets/icons/risk.png",
+    icon: "assets/clock.svg",
     text: "Instent risk profiling",
   },
   {
-    icon: "/assets/icons/upi.png",
+    icon: "assets/upi.svg",
     text: "100% secured payments with UPI",
   },
   {
-    icon: "/assets/icons/report.png",
+    icon: "assets/text.svg",
     text: "Daily report for your investment",
   },
 ];
@@ -85,7 +85,7 @@ const AboutSection = () => {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="../../assets/AMFI.svg"
+                    src="assets/AMFI.svg"
                     alt="AMFI"
                     width="36"
                     height="36"
@@ -112,7 +112,7 @@ const AboutSection = () => {
                     }}
                   >
                     <img
-                      src="../../assets/man.svg"
+                      src="assets/man.svg"
                       alt="Investor1"
                       width="32"
                       height="32"
@@ -123,7 +123,7 @@ const AboutSection = () => {
                       }}
                     />
                     <img
-                      src="../../assets/girl.svg"
+                      src="assets/girl.svg"
                       alt="Investor2"
                       width="32"
                       height="32"
@@ -147,7 +147,7 @@ const AboutSection = () => {
 
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <img
-                    src="../../assets/bag.svg"
+                    src="assets/bag.svg"
                     alt="Legacy"
                     width="36"
                     height="36"
@@ -173,7 +173,7 @@ const AboutSection = () => {
                     }}
                   >
                     <img
-                      src="../../assets/sbi.svg"
+                      src="assets/sbi.svg"
                       alt="Investor1"
                       width="32"
                       height="32"
@@ -184,7 +184,7 @@ const AboutSection = () => {
                       }}
                     />
                     <img
-                      src="../../assets/hdfc.svg"
+                      src="assets/hdfc.svg"
                       alt="Investor2"
                       width="32"
                       height="32"
@@ -238,7 +238,7 @@ const AboutSection = () => {
                     <img
                       src={item.icon}
                       alt="icon"
-                      style={{ width: 32, height: 32 }}
+                      style={{ width: 32, height: 32, color:"black" }}
                     />
                   </Box>
                   <Typography

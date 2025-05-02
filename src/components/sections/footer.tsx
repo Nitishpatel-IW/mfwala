@@ -38,17 +38,17 @@ function Footer() {
       <Box>
         <Box sx={{ display: "flex", gap: 2 ,px:6}}>
           <img
-            src="../../assets/facebook.svg"
+            src="assets/facebook.svg"
             alt="logo"
             style={{ maxHeight: "500px" }}
           />
           <img
-            src="../../assets/instagram.svg"
+            src="assets/instagram.svg"
             alt="logo"
             style={{ maxHeight: "500px" }}
           />
           <img
-            src="../../assets/twitter.svg"
+            src="assets/twitter.svg"
             alt="logo"
             style={{ maxHeight: "500px" }}
           />
