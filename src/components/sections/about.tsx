@@ -1,5 +1,3 @@
-// AboutSection.tsx
-import React from "react";
 import { Divider } from "@mui/material";
 
 import { Box, Grid, Paper, Typography, Avatar, Stack } from "@mui/material";
