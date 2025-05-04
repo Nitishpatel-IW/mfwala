@@ -8,11 +8,8 @@ import {
   Toolbar,
   Divider,
   Grid,
-  Drawer,
-  IconButton,
   useMediaQuery,
 } from "@mui/material";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
 const LandingPage = () => {
   const isSmallScreen = useMediaQuery("(max-width:900px)");

@@ -1,5 +1,5 @@
 
-import { Box, Typography, Button, Grid, Paper,useMediaQuery } from "@mui/material";
+import { Box, Typography, Button, Paper,useMediaQuery } from "@mui/material";
 
 const goals = [
   {
