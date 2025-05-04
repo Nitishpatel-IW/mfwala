@@ -124,7 +124,7 @@ function TermsPage() {
             pt: 10,
           }}
         >
-          <Typography sx={{ fontSize: "60px", fontWeight: "500" }}>
+          <Typography sx={{ fontSize:{xs:"24px",md:"48px"}, fontWeight: "500" }}>
             Terms of Use
           </Typography>
         </Box>
