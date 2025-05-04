@@ -24,7 +24,7 @@ const goals = [
     bgColor: "#EFF6FF",
   },
   {
-    img: "assets/vector.svg",
+    img: "assets/Vector.svg",
     iconColor: "#FF7C95",
     title: "Plan for",
     subtitle: "Child’s Marriage",
@@ -86,7 +86,7 @@ function Dreams() {
           flexDirection: "row",
           overflowX: isSmallScreen ? "auto" : "visible",
           flexWrap: isSmallScreen ? "nowrap" : "wrap",
-          justifyContent: "center",
+          justifyContent: {xs:"start",md:"center"},
           gap: 3,
           py: 2,
           px: 1,

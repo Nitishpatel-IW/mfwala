@@ -30,18 +30,26 @@ function SimpleSteps() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            pl: { xs: 3, md: 0 },
           }}
         >
-          <img src="assets/Goal.svg" width={370} height={420} />
+          <Box
+            component="img"
+            src="assets/Goal.svg"
+            sx={{
+              width: { xs: "300px", sm: "60%", md: "380px" },
+              height: "auto",
+              maxWidth: "100%",
+            }}
+            alt="Mutual Fund"
+          />
         </Box>
         <Box sx={{ flexWrap: "wrap", maxWidth: "470px", pt: 3 }}>
           <Typography
             sx={{
               fontSize: "30px",
               fontWeight: "500",
-              pr: { xs: 8, md: 18 },
-              pb:3,
+              pr: { xs: 2, md: 18 },
+              pb: 3,
               lineHeight: 1.3,
             }}
           >
@@ -51,7 +59,13 @@ function SimpleSteps() {
             <img
               src="assets/Stroke.svg"
               alt="check"
-              style={{ marginTop: 4, marginRight: 12, backgroundColor: "black",borderRadius:"60%",padding:"4px" }}
+              style={{
+                marginTop: 4,
+                marginRight: 12,
+                backgroundColor: "black",
+                borderRadius: "60%",
+                padding: "4px",
+              }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
               <strong style={{ color: "#1A1A1A" }}>Set Your Goal :</strong>{" "}
@@ -65,7 +79,13 @@ function SimpleSteps() {
             <img
               src="assets/Stroke.svg"
               alt="check"
-              style={{ marginTop: 4, marginRight: 12,backgroundColor: "black",borderRadius:"60%",padding:"4px"  }}
+              style={{
+                marginTop: 4,
+                marginRight: 12,
+                backgroundColor: "black",
+                borderRadius: "60%",
+                padding: "4px",
+              }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
               <strong style={{ color: "#1A1A1A" }}>Select A Basket:</strong>{" "}
@@ -78,7 +98,13 @@ function SimpleSteps() {
             <img
               src="assets/Stroke.svg"
               alt="check"
-              style={{ marginTop: 4, marginRight: 12,backgroundColor: "black",borderRadius:"60%",padding:"4px"  }}
+              style={{
+                marginTop: 4,
+                marginRight: 12,
+                backgroundColor: "black",
+                borderRadius: "60%",
+                padding: "4px",
+              }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
               <strong style={{ color: "#1A1A1A" }}>Make Payment :</strong>{" "}

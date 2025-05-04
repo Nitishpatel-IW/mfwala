@@ -29,28 +29,36 @@ function Kyc() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            pl: { xs: 3, md: 0 },
           }}
         >
-          <img src="assets/pan.svg" width={370} height={420} />
+          <Box
+            component="img"
+            src="assets/pan.svg"
+            sx={{
+              width: { xs: "300px", sm: "60%", md: "380px" },
+              height: "auto",
+              maxWidth: "100%",
+            }}
+            alt="Mutual Fund"
+          />
         </Box>
         <Box sx={{ flexWrap: "wrap", maxWidth: "470px", pt: 3 }}>
           <Typography
             sx={{
               fontSize: "30px",
               fontWeight: "500",
-              pr: { xs: 8, md: 18 },
+              pr: { xs: 0, md: 18 },
               lineHeight: 1.3,
             }}
           >
-            100% Digital KYC + Onboarding
+            100% Digital<br /> KYC + Onboarding
           </Typography>
           <Typography
             sx={{
               fontSize: "14px",
               my: 2,
               color: "#666666",
-              pr: { xs: 4, md: 2 },
+              pr: { xs: 0, md: 2 },
             }}
           >
             New to mutual fund investing? No worries, we’ve got you covered.

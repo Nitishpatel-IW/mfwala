@@ -38,7 +38,7 @@ function Faq() {
     <>
       <Box
         style={{
-          padding: "100px 10px",
+          padding: "100px 20px",
           display: "flex",
           justifyContent: "center",
           background: `

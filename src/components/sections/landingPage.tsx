@@ -122,7 +122,7 @@ const LandingPage = () => {
           sx={{
             mt: { xs: 6, sm: 4, md: 8 },
             pb: { xs: 1, sm: 2, md: 2 },
-            px: { xs: 8, sm: 6, md: 10 },
+            px: { xs: 4, sm: 6, md: 10 },
           }}
         >
           <Grid container spacing={4} alignItems="center">
@@ -137,22 +137,24 @@ const LandingPage = () => {
                   variant="h3"
                   sx={{ fontWeight: "bold", color: "#fff" }}
                 >
-                  Invest in <br />
+                  Invest in
+                  <br />
                   Mutual Funds
                   <br />
                   <Typography
+                    variant="h3"
                     sx={{
                       background:
                         "linear-gradient(89.69deg, #E9FF9D 1.68%, #FFFFFF 78.21%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      fontSize: { xs: "24px", md: "40px" },
+                      fontSize: { xs: "24px", md: "48px" },
                     }}
                   >
                     under 5 minutes
                   </Typography>
                 </Typography>
-                <Typography variant="body1" sx={{ color: "#aaa", mt: 2 }}>
+                <Typography variant="body1" sx={{ color: "#aaa", mt: 2,pr:{xs:0,md:8} }}>
                   Invest in 3 Simple Steps – Choose a Goal, Select a risk
                   profile based basket of funds, Complete payment to invest
                 </Typography>

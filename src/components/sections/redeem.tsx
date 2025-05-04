@@ -25,15 +25,29 @@ function Redeem() {
           alignItems: "center",
         }}
       >
-        <Box sx={{ display: "flex", justifyContent: "center",pl: { xs: 3, md: 0 } }}>
-          <img src="assets/mutualFund.svg" width={390} height={420} />
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="assets/mutualFund.svg"
+            sx={{
+              width: { xs: "300px", sm: "60%", md: "380px" },
+              height: "auto",
+              maxWidth: "100%",
+            }}
+            alt="Mutual Fund"
+          />
         </Box>
-        <Box sx={{ flexWrap: "wrap", maxWidth: "470px",pt:3 }}>
+        <Box sx={{ flexWrap: "wrap", maxWidth: "470px", pt: 3 }}>
           <Typography
             sx={{
               fontSize: "30px",
               fontWeight: "500",
-              pr: { xs: 8, md: 18 },
+              pr: { xs: 0, md: 18 },
               lineHeight: 1.3,
             }}
           >
@@ -44,7 +58,7 @@ function Redeem() {
               fontSize: "14px",
               my: 2,
               color: "#666666",
-              pr: { xs: 4, md: 2 },
+              pr: { xs: 0, md: 2 },
             }}
           >
             Invest in Liquid Funds with MutualFund Wala and redeem upto INR
