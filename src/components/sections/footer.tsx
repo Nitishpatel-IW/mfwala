@@ -9,7 +9,8 @@ function Footer() {
       sx={{
         backgroundColor: "#0D0D0D",
         px: { xs: 2, md: 0 },
-        py: { xs: 4, md: 10 },
+        pt: { xs: 4, md: 10 },
+        pb: { xs: 4, md: 4 },
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-between",
@@ -131,13 +132,15 @@ function Footer() {
         <Box
           sx={{
             maxHeight: { xs: "162px", md: "203px" },
-            maxWidth: { xs: "162px", md: "203px" },
+            maxWidth: { xs: "162px", md: "203px"
+             },
           }}
         >
-          <img
+          <Box
+            component="img"
             src="assets/Logo.svg"
             alt="MW Logo"
-            style={{ width: "100%", height: "auto" }}
+            sx={{ width: "100%", height: "auto" }}
           />
         </Box>
       </Box>

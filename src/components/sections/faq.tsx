@@ -53,16 +53,16 @@ function Faq() {
             width: 770,
           }}
         >
-          <h2
+          <Typography
             style={{
               textAlign: "center",
               fontWeight: "bold",
               fontSize: "32px",
-              marginBottom: "40px",
+              marginBottom: "20px",
             }}
           >
             Faqs
-          </h2>
+          </Typography>
           {faqData.map((item, index) => (
             <div
               key={index}
@@ -85,9 +85,9 @@ function Faq() {
                 }}
                 onClick={() => toggleFaq(index)}
               >
-                <p style={{ fontWeight: 600, fontSize: "16px", margin: 0 }}>
+                <Typography style={{ fontWeight: 600, fontSize: "16px", margin: 0 }}>
                   {item.question}
-                </p>
+                </Typography>
                 <div
                   style={{
                     width: "24px",
@@ -98,17 +98,18 @@ function Faq() {
                     lineHeight: "24px",
                     fontWeight: "bold",
                     fontSize: "18px",
+                    aspectRatio: "1/1",
                   }}
                 >
                   {activeIndex === index ? "−" : "+"}
                 </div>
               </div>
               {activeIndex === index && (
-                <p
+                <Typography
                   style={{ marginTop: "12px", fontSize: "14px", color: "#555" }}
                 >
                   {item.answer}
-                </p>
+                </Typography>
               )}
             </div>
           ))}

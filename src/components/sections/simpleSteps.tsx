@@ -65,6 +65,7 @@ function SimpleSteps() {
                 backgroundColor: "black",
                 borderRadius: "60%",
                 padding: "4px",
+                aspectRatio: "1/1",
               }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
@@ -85,6 +86,7 @@ function SimpleSteps() {
                 backgroundColor: "black",
                 borderRadius: "60%",
                 padding: "4px",
+                aspectRatio: "1/1",
               }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
@@ -104,6 +106,7 @@ function SimpleSteps() {
                 backgroundColor: "black",
                 borderRadius: "60%",
                 padding: "4px",
+                aspectRatio: "1/1",
               }}
             />
             <Typography sx={{ fontSize: "14px", color: "#666" }}>
