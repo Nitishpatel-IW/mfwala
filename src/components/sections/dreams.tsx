@@ -1,5 +1,4 @@
-
-import { Box, Typography, Button, Paper,useMediaQuery } from "@mui/material";
+import { Box, Typography, Button, Paper, useMediaQuery } from "@mui/material";
 
 const goals = [
   {
@@ -10,7 +9,7 @@ const goals = [
     bgColor: "#F3E8FF",
   },
   {
-    img: "assets/graduate.svg",
+    img: "assets/chair.svg",
     iconColor: "#FF9500",
     title: "Plan Your",
     subtitle: "Retirement",
@@ -55,7 +54,7 @@ function Dreams() {
       textAlign="center"
       pt={12}
       pb={4}
-      px={{ xs: 4, sm: 8, md: 20 }}
+      px={{ xs: 4, sm: 8, md: 11 }}
       style={{
         background: `
             radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
@@ -86,8 +85,8 @@ function Dreams() {
           flexDirection: "row",
           overflowX: isSmallScreen ? "auto" : "visible",
           flexWrap: isSmallScreen ? "nowrap" : "wrap",
-          justifyContent: {xs:"start",md:"center"},
-          gap: 3,
+          justifyContent: { xs: "start", md: "center" },
+          gap: 2,
           py: 2,
           px: 1,
           scrollSnapType: isSmallScreen ? "x mandatory" : "none",
@@ -98,9 +97,11 @@ function Dreams() {
             key={idx}
             sx={{
               scrollSnapAlign: isSmallScreen ? "start" : "unset",
-              minWidth: isSmallScreen ? "240px" : "auto",
+              minWidth: isSmallScreen ? "214px" : "auto",
               flex: "0 0 auto",
-              width: isSmallScreen ? "auto" : { xs: "100%", sm: "47%", md: "22%" },
+              width: isSmallScreen
+                ? "auto"
+                : { xs: "100%", sm: "47%", md: "22%" },
             }}
           >
             <Paper
@@ -109,8 +110,9 @@ function Dreams() {
                 backgroundColor: goal.bgColor,
                 borderRadius: 3,
                 border: `1px solid ${darkenHex(goal.bgColor, 20)}`,
-                padding: 3,
-                textAlign: "center",
+                minHeight: { xs: "212px", md: "275px" },
+                width: { xs: "204px", md: "270px" },
+                alignContent: "center",
               }}
             >
               <Box
@@ -125,12 +127,16 @@ function Dreams() {
                   margin: "0 auto 16px",
                 }}
               >
-                <img src={goal.img} alt={goal.title} style={{ width: 32, height: 32 }} />
+                <img
+                  src={goal.img}
+                  alt={goal.title}
+                  style={{ width: 32, height: 32 }}
+                />
               </Box>
-              <Typography variant="body1" fontWeight="600">
+              <Typography variant="body1" fontWeight="550" color="#1A1A1A" fontSize={16}>
                 {goal.title}
               </Typography>
-              <Typography variant="body1" fontWeight="600">
+              <Typography variant="body1" fontWeight="550" color="#1A1A1A" fontSize={16}>
                 {goal.subtitle}
               </Typography>
             </Paper>
@@ -149,7 +155,8 @@ function Dreams() {
           py: 1.1,
           textTransform: "none",
           borderRadius: "6px",
-          flexWrap:"nowrap"
+          flexWrap: "nowrap",
+          fontWeight: "600",
         }}
       >
         Start Investing Today

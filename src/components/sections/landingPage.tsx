@@ -10,6 +10,15 @@ import {
   Grid,
   useMediaQuery,
 } from "@mui/material";
+import DotLayer from "../lib/component/DotLayer";
+
+const navTextStyle = {
+  fontWeight: 500,
+  fontSize: "14px",
+  lineHeight: "120%",
+  letterSpacing: "2%",
+  color: "#AAA9A9",
+};
 
 const LandingPage = () => {
   const isSmallScreen = useMediaQuery("(max-width:900px)");
@@ -31,20 +40,26 @@ const LandingPage = () => {
               justifyContent: "space-between",
               position: "absolute",
               width: "100%",
-              top: -40,
-              opacity: 0.6,
+              top: -10,
+              opacity: 0.5,
             }}
           >
-            <img
-              src="assets/LLight.svg"
-              alt="logo"
-              style={{ maxHeight: "500px", borderRadius: "20px" }}
-            />
-            <img
-              src="assets/RLight.svg"
-              alt="logo"
-              style={{ maxHeight: "500px", borderRadius: "20px" }}
-            />
+            <Box sx={{ position: "relative", display: "inline-block" }}>
+              <DotLayer position="left" direction="leftToRight" />
+              <img
+                src="assets/LLight.svg"
+                alt="logo"
+                style={{ maxHeight: "500px",}}
+              />
+            </Box>
+            <Box sx={{ position: "relative", display: "inline-block" }}>
+              <DotLayer position="right" direction="rightToLeft" />
+              <img
+                src="assets/RLight.svg"
+                alt="logo"
+                style={{ maxHeight: "500px",}}
+              />
+            </Box>
           </Box>
         )}
         <AppBar position="static" color="transparent" elevation={0}>
@@ -69,14 +84,35 @@ const LandingPage = () => {
                 <img
                   src="assets/blackGroup.svg"
                   alt="logo"
-                  style={{ maxHeight: "500px", borderRadius: "20px" }}
+                  style={{ maxHeight: "500px" }}
                 />
               ) : (
-                <img
-                  src="assets/Group 1000005422.svg"
-                  alt="logo"
-                  style={{ maxHeight: "500px", borderRadius: "20px" }}
-                />
+                <Box sx={{ position: "relative", display: "inline-block" }}>
+                  <Box
+                    sx={{
+                      border: "1px solid white",
+                      borderRadius: "50%",
+                      width: "6px",
+                      height: "6px",
+                      fontSize: "5px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      top: "-4px",
+                      left: "53%",
+                      // transform: "translateX(-50%)",
+                      zIndex: 1,
+                    }}
+                  >
+                    R
+                  </Box>
+                  <img
+                    src="assets/Group 1000005422.svg"
+                    alt="logo"
+                    style={{ maxHeight: "500px" }}
+                  />
+                </Box>
               )}
               <Typography
                 variant="h6"
@@ -92,13 +128,34 @@ const LandingPage = () => {
                 <Typography
                   variant="body1"
                   onClick={() => navigate("/")}
-                  sx={{ cursor: "pointer" }}
+                  sx={{ cursor: "pointer", ...navTextStyle }}
                 >
                   Home
                 </Typography>
-                <Typography variant="body1">About us</Typography>
-                <Typography variant="body1">What is mfwala?</Typography>
-                <Typography variant="body1">Our highlight</Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  About us
+                </Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  What is mfwala?
+                </Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  Our highlight
+                </Typography>
               </Box>
             )}
             <Button
@@ -120,12 +177,12 @@ const LandingPage = () => {
         </AppBar>
         <Container
           sx={{
-            mt: { xs: 6, sm: 4, md: 8 },
+            mt: { xs: 6, sm: 4, md: 5 },
             pb: { xs: 1, sm: 2, md: 2 },
-            px: { xs: 4, sm: 6, md: 10 },
+            px: { xs: 4, sm: 6, md: 8 },
           }}
         >
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={6} alignItems="center">
             <Grid size={{ xs: 12, md: 7 }}>
               <Box
                 sx={{
@@ -135,7 +192,12 @@ const LandingPage = () => {
               >
                 <Typography
                   variant="h3"
-                  sx={{ fontWeight: "bold", color: "#fff" }}
+                  sx={{
+                    fontWeight: "580",
+                    color: "#fff",
+                    fontSize: "64px",
+                    lineHeight: "70px",
+                  }}
                 >
                   Invest in
                   <br />
@@ -148,13 +210,18 @@ const LandingPage = () => {
                         "linear-gradient(89.69deg, #E9FF9D 1.68%, #FFFFFF 78.21%)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
-                      fontSize: { xs: "24px", md: "48px" },
+                      fontSize: { xs: "24px", md: "64px" },
+                      fontWeight: "580",
+                      lineHeight: "65px",
                     }}
                   >
                     under 5 minutes
                   </Typography>
                 </Typography>
-                <Typography variant="body1" sx={{ color: "#aaa", mt: 2,pr:{xs:0,md:8} }}>
+                <Typography
+                  variant="body1"
+                  sx={{ color: "#aaa", mt: 2, pr: { xs: 0, md: 8 } }}
+                >
                   Invest in 3 Simple Steps – Choose a Goal, Select a risk
                   profile based basket of funds, Complete payment to invest
                 </Typography>
@@ -169,6 +236,7 @@ const LandingPage = () => {
                     py: 1.1,
                     textTransform: "none",
                     borderRadius: "6px",
+                    fontWeight: "600",
                   }}
                 >
                   Start Investing Today
@@ -312,15 +380,25 @@ const LandingPage = () => {
             </Grid>
             <Grid size={{ xs: 12, md: 5 }}>
               <Box sx={{ textAlign: "center" }}>
-                <img
+                <Box
+                  component="img"
+                  src="assets/thumbUp.svg"
+                  sx={{
+                    maxWidth: "100%",
+                    maxHeight: "540px",
+                    borderRadius: "20px",
+                  }}
+                />
+                {/* <img
                   src="assets/thumbUp.svg"
                   alt="Thumbs Up Guy"
                   style={{
                     maxWidth: "100%",
-                    maxHeight: "500px",
+                    maxHeight: "540px",
                     borderRadius: "20px",
+                    
                   }}
-                />
+                /> */}
               </Box>
             </Grid>
           </Grid>
