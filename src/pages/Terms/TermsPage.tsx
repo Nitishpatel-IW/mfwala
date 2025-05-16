@@ -5,9 +5,19 @@ import {
   useMediaQuery,
   Toolbar,
   Typography,
+  Divider,
 } from "@mui/material";
 import Footer from "../../components/sections/footer";
 import { useNavigate } from "react-router-dom";
+import DotLayer from "../../components/lib/component/DotLayer";
+
+const navTextStyle = {
+  fontWeight: 500,
+  fontSize: "14px",
+  lineHeight: "120%",
+  letterSpacing: "2%",
+  color: "#AAA9A9",
+};
 
 function TermsPage() {
   const isSmallScreen = useMediaQuery("(max-width:1000px)");
@@ -33,16 +43,22 @@ function TermsPage() {
               opacity: 0.6,
             }}
           >
-            <img
-              src="assets/LLight.svg"
-              alt="logo"
-              style={{ maxHeight: "500px", borderRadius: "20px" }}
-            />
-            <img
-              src="assets/RLight.svg"
-              alt="logo"
-              style={{ maxHeight: "500px", borderRadius: "20px" }}
-            />
+           <Box sx={{ position: "relative", display: "inline-block" }}>
+              <DotLayer position="left" direction="leftToRight" />
+              <img
+                src="assets/LLight.svg"
+                alt="logo"
+                style={{ maxHeight: "500px",}}
+              />
+            </Box>
+            <Box sx={{ position: "relative", display: "inline-block" }}>
+              <DotLayer position="right" direction="rightToLeft" />
+              <img
+                src="assets/RLight.svg"
+                alt="logo"
+                style={{ maxHeight: "500px",}}
+              />
+            </Box>
           </Box>
         )}
         <AppBar position="static" color="transparent" elevation={0}>
@@ -70,11 +86,32 @@ function TermsPage() {
                   style={{ maxHeight: "500px", borderRadius: "20px" }}
                 />
               ) : (
-                <img
-                  src="assets/Group 1000005422.svg"
-                  alt="logo"
-                  style={{ maxHeight: "500px", borderRadius: "20px" }}
-                />
+                <Box sx={{ position: "relative", display: "inline-block" }}>
+                  <Box
+                    sx={{
+                      border: "1px solid white",
+                      borderRadius: "50%",
+                      width: "6px",
+                      height: "6px",
+                      fontSize: "5px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      top: "-4px",
+                      left: "53%",
+                      // transform: "translateX(-50%)",
+                      zIndex: 1,
+                    }}
+                  >
+                    R
+                  </Box>
+                  <img
+                    src="assets/Group 1000005422.svg"
+                    alt="logo"
+                    style={{ maxHeight: "500px" }}
+                  />
+                </Box>
               )}
               <Typography
                 variant="h6"
@@ -90,13 +127,34 @@ function TermsPage() {
                 <Typography
                   variant="body1"
                   onClick={() => navigate("/")}
-                  sx={{ cursor: "pointer" }}
+                  sx={{ cursor: "pointer", ...navTextStyle }}
                 >
                   Home
                 </Typography>
-                <Typography variant="body1">About us</Typography>
-                <Typography variant="body1">What is mfwala?</Typography>
-                <Typography variant="body1">Our highlight</Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  About us
+                </Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  What is mfwala?
+                </Typography>
+                <Divider
+                  orientation="vertical"
+                  sx={{ bgcolor: "#C1F900" }}
+                  flexItem
+                ></Divider>
+                <Typography variant="body1" sx={{ ...navTextStyle }}>
+                  Our highlight
+                </Typography>
               </Box>
             )}
             <Button
