@@ -31,7 +31,7 @@ const DotLayer: React.FC<DotLayerProps> = ({ position, direction }) => {
     const originX = canvas.width / 3;
     const originY = canvas.height; // bottom-center
     const spreadAngle = Math.PI / 6; // 45 degrees
-    const speedMultiplier = 1.5;
+    const speedMultiplier = 3;
     const dots: Dot[] = Array.from({ length: dotCount }).map(() => {
       const angle = (Math.random() +1) * spreadAngle;
 
