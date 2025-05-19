@@ -39,8 +39,8 @@ function TermsPage() {
               justifyContent: "space-between",
               position: "absolute",
               width: "100%",
-              top: -40,
-              opacity: 0.6,
+              top: -10,
+              opacity: 0.5,
             }}
           >
            <Box sx={{ position: "relative", display: "inline-block" }}>
