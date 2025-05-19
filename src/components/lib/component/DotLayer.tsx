@@ -97,7 +97,7 @@ const DotLayer: React.FC<DotLayerProps> = ({ position, direction }) => {
         position: "absolute",
         top: 0,
         [position]: 0,
-        width: "230px",
+        width: "200px",
         height: "250px",
         zIndex: 1,
         pointerEvents: "none",
