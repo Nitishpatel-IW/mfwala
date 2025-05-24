@@ -6,7 +6,7 @@ function Kyc() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        padding: "80px 20px 20px 0",
+        padding: "200px 20px 150px 0",
         background: `
   radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
   radial-gradient(circle at 90% 65%, #FF950030, transparent 200px),
@@ -20,9 +20,9 @@ function Kyc() {
         sx={{
           maxWidth: "80%",
           display: { xs: "block", md: "flex" },
-          gap: 20,
+          gap: 15,
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: "flex-start",
         }}
       >
         <Box
@@ -45,20 +45,23 @@ function Kyc() {
         <Box sx={{ flexWrap: "wrap", maxWidth: "470px", pt: 3 }}>
           <Typography
             sx={{
-              fontSize: "30px",
-              fontWeight: "500",
-              pr: { xs: 0, md: 18 },
-              lineHeight: 1.3,
+              fontSize: "40px",
+              fontWeight: "800",
+              pr: { xs: 0, md: 12 },
+              lineHeight: "48px",
             }}
           >
-            100% Digital<br /> KYC + Onboarding
+            100% Digital
+            <br /> KYC + Onboarding
           </Typography>
           <Typography
             sx={{
               fontSize: "14px",
-              my: 2,
-              color: "#666666",
-              pr: { xs: 0, md: 2 },
+              my: 4,
+              color: "#666",
+              pr: { xs: 0, md: 10 },
+              fontWeight: "400",
+              letterSpacing: "0.35px",
             }}
           >
             New to mutual fund investing? No worries, we’ve got you covered.
@@ -71,11 +74,12 @@ function Kyc() {
               backgroundColor: "#C1F900",
               color: "#1A1A1A",
               fontSize: "14px",
-              px: 4.5,
-              py: 1.1,
+              px: 4,
+              py: 1.5,
               textTransform: "none",
               borderRadius: "6px",
               whiteSpace: "nowrap",
+              boxShadow: "none",
             }}
           >
             Start Investing Today

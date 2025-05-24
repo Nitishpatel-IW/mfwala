@@ -13,7 +13,14 @@ import {
 import DotLayer from "../lib/component/DotLayer";
 
 const navTextStyle = {
-  fontWeight: 500,
+  fontWeight: 600,
+  fontSize: "14px",
+  lineHeight: "120%",
+  letterSpacing: "2%",
+  color: "#AAA9A9",
+};
+const amfiStyle = {
+  fontWeight: 600,
   fontSize: "14px",
   lineHeight: "120%",
   letterSpacing: "2%",
@@ -27,9 +34,8 @@ const LandingPage = () => {
     <>
       <Box
         sx={{
-          backgroundColor: "#000",
+          backgroundColor: "#0D0D0D",
           minHeight: "100vh",
-          color: "#fff",
           position: "relative",
         }}
       >
@@ -40,7 +46,7 @@ const LandingPage = () => {
               justifyContent: "space-between",
               position: "absolute",
               width: "100%",
-              top: -10,
+              top: -1,
               opacity: 0.5,
             }}
           >
@@ -49,7 +55,7 @@ const LandingPage = () => {
               <img
                 src="assets/LLight.svg"
                 alt="logo"
-                style={{ maxHeight: "500px",}}
+                style={{ maxHeight: "500px" }}
               />
             </Box>
             <Box sx={{ position: "relative", display: "inline-block" }}>
@@ -57,7 +63,7 @@ const LandingPage = () => {
               <img
                 src="assets/RLight.svg"
                 alt="logo"
-                style={{ maxHeight: "500px",}}
+                style={{ maxHeight: "500px" }}
               />
             </Box>
           </Box>
@@ -67,7 +73,7 @@ const LandingPage = () => {
             sx={{
               justifyContent: "space-between",
               alignItems: "center",
-              mx: { xs: 0, sm: 4, md: 8 },
+              mx: { xs: 0, sm: 0, md: 7 },
               my: { xs: 0, sm: 2, md: 3 },
               backgroundColor: { xs: "white", md: "transparent" },
             }}
@@ -87,44 +93,24 @@ const LandingPage = () => {
                   style={{ maxHeight: "500px" }}
                 />
               ) : (
-                <Box sx={{ position: "relative", display: "inline-block" }}>
-                  <Box
-                    sx={{
-                      border: "1px solid white",
-                      borderRadius: "50%",
-                      width: "6px",
-                      height: "6px",
-                      fontSize: "5px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      position: "absolute",
-                      top: "-4px",
-                      left: "53%",
-                      // transform: "translateX(-50%)",
-                      zIndex: 1,
-                    }}
-                  >
-                    R
-                  </Box>
+                <Box>
                   <img
-                    src="assets/Group 1000005422.svg"
+                    src="assets/Logo_name.svg"
                     alt="logo"
                     style={{ maxHeight: "500px" }}
                   />
                 </Box>
               )}
-              <Typography
-                variant="h6"
-                sx={{ fontWeight: "bold", lineHeight: 1 }}
-              >
-                <span style={{ display: "block" }}>mutual</span>
-                <span style={{ display: "block" }}>fund</span>
-                <span style={{ display: "block" }}>wala</span>
-              </Typography>
             </Box>
             {!isSmallScreen && (
-              <Box sx={{ display: "flex", gap: 3 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: 3,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <Typography
                   variant="body1"
                   onClick={() => navigate("/")}
@@ -134,24 +120,21 @@ const LandingPage = () => {
                 </Typography>
                 <Divider
                   orientation="vertical"
-                  sx={{ bgcolor: "#C1F900" }}
-                  flexItem
+                  sx={{ bgcolor: "#C1F900", height: "10px" }}
                 ></Divider>
                 <Typography variant="body1" sx={{ ...navTextStyle }}>
                   About us
                 </Typography>
                 <Divider
                   orientation="vertical"
-                  sx={{ bgcolor: "#C1F900" }}
-                  flexItem
+                  sx={{ bgcolor: "#C1F900", height: "10px" }}
                 ></Divider>
                 <Typography variant="body1" sx={{ ...navTextStyle }}>
                   What is mfwala?
                 </Typography>
                 <Divider
                   orientation="vertical"
-                  sx={{ bgcolor: "#C1F900" }}
-                  flexItem
+                  sx={{ bgcolor: "#C1F900", height: "10px" }}
                 ></Divider>
                 <Typography variant="body1" sx={{ ...navTextStyle }}>
                   Our highlight
@@ -164,11 +147,13 @@ const LandingPage = () => {
                 backgroundColor: "#C1F900",
                 color: "#1A1A1A",
                 fontSize: "14px",
-                px: 4.5,
-                py: 1.1,
+                fontWeight: 700,
+                px: { xs: 2, sm: 3, md: 4 },
+                py: 1.8,
                 textTransform: "none",
                 borderRadius: "6px",
                 whiteSpace: "nowrap",
+                boxShadow: "none",
               }}
             >
               Download App
@@ -177,26 +162,26 @@ const LandingPage = () => {
         </AppBar>
         <Container
           sx={{
-            mt: { xs: 6, sm: 4, md: 5 },
-            pb: { xs: 1, sm: 2, md: 2 },
-            px: { xs: 4, sm: 6, md: 8 },
+            mt: { xs: 6, sm: 4, md: 10 },
+            pb: { xs: 0, sm: 2, md: 4 },
+            px: { xs: 3, sm: 6, md: 3 },
           }}
         >
-          <Grid container spacing={6} alignItems="center">
-            <Grid size={{ xs: 12, md: 7 }}>
+          <Grid container spacing={4} alignItems="flex-start">
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box
                 sx={{
-                  mt: { xs: 0, md: 10 },
+                  mt: { xs: 0, md: 2 },
                   textAlign: { xs: "center", md: "left" },
                 }}
               >
                 <Typography
                   variant="h3"
                   sx={{
-                    fontWeight: "580",
+                    fontWeight: "800",
                     color: "#fff",
-                    fontSize: "64px",
-                    lineHeight: "70px",
+                    fontSize: { xs: "40px", md: "64px" },
+                    lineHeight: { xs: "44px", md: "70px" },
                   }}
                 >
                   Invest in
@@ -211,8 +196,8 @@ const LandingPage = () => {
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       fontSize: { xs: "24px", md: "64px" },
-                      fontWeight: "580",
-                      lineHeight: "65px",
+                      fontWeight: "800",
+                      lineHeight: { xs: "44px", md: "70px" },
                     }}
                   >
                     under 5 minutes
@@ -220,7 +205,15 @@ const LandingPage = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: "#aaa", mt: 2, pr: { xs: 0, md: 8 } }}
+                  sx={{
+                    color: "#B1B1B1",
+                    mt: 2,
+                    pr: { xs: 0, md: 8 },
+                    lineHeight: { xs: "24px", md: "26px" },
+                    fontWeight: "500",
+                    fontFamily: "Manrope",
+                    fontSize: { xs: "14px", md: "auto" },
+                  }}
                 >
                   Invest in 3 Simple Steps – Choose a Goal, Select a risk
                   profile based basket of funds, Complete payment to invest
@@ -232,11 +225,11 @@ const LandingPage = () => {
                     backgroundColor: "#C1F900",
                     color: "#1A1A1A",
                     fontSize: "14px",
-                    px: 4.5,
-                    py: 1.1,
+                    px: 4,
+                    py: 1.5,
                     textTransform: "none",
                     borderRadius: "6px",
-                    fontWeight: "600",
+                    fontWeight: "800",
                   }}
                 >
                   Start Investing Today
@@ -245,11 +238,13 @@ const LandingPage = () => {
               {!isSmallScreen && (
                 <Box
                   sx={{
-                    mt: 10,
+                    mt: 20,
+                    mb: 2,
                     display: "flex",
                     flexWrap: "wrap",
                     justifyContent: { xs: "center", md: "flex-start" },
                     gap: 2,
+                    color: "#AAA9A9",
                   }}
                 >
                   <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -260,8 +255,18 @@ const LandingPage = () => {
                       height="36"
                     />
                     <Box sx={{ ml: 1 }}>
-                      <Typography sx={{ fontSize: "14px" }}>AMFI</Typography>
-                      <Typography sx={{ fontSize: "14px" }}>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
+                        AMFI
+                      </Typography>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
                         Registered
                       </Typography>
                     </Box>
@@ -269,7 +274,7 @@ const LandingPage = () => {
                   <Divider
                     orientation="vertical"
                     flexItem
-                    sx={{ borderColor: "#555" }}
+                    sx={{ borderColor: "#555", borderStyle: "dashed" }}
                   />
                   <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Box
@@ -283,8 +288,8 @@ const LandingPage = () => {
                       <img
                         src="assets/man.svg"
                         alt="Investor1"
-                        width="32"
-                        height="32"
+                        width="36"
+                        height="36"
                         style={{
                           borderRadius: "50%",
                           position: "absolute",
@@ -292,20 +297,32 @@ const LandingPage = () => {
                         }}
                       />
                       <img
-                        src="assets/girl.svg"
+                        src="assets/girl img.png"
                         alt="Investor2"
-                        width="32"
-                        height="32"
+                        width="36"
+                        height="36"
                         style={{
                           borderRadius: "50%",
                           position: "absolute",
                           left: 18,
+                          objectFit: "cover",
+                          objectPosition: "top",
                         }}
                       />
                     </Box>
-                    <Box sx={{ ml: 1 }}>
-                      <Typography sx={{ fontSize: "14px" }}>8,000+</Typography>
-                      <Typography sx={{ fontSize: "14px" }}>
+                    <Box sx={{ ml: 2 }}>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
+                        8,000+
+                      </Typography>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
                         Investors
                       </Typography>
                     </Box>
@@ -313,7 +330,7 @@ const LandingPage = () => {
                   <Divider
                     orientation="vertical"
                     flexItem
-                    sx={{ borderColor: "#555" }}
+                    sx={{ borderColor: "#555", borderStyle: "dashed" }}
                   />
 
                   <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -324,10 +341,18 @@ const LandingPage = () => {
                       height="36"
                     />
                     <Box sx={{ ml: 1 }}>
-                      <Typography sx={{ fontSize: "14px" }}>
+                    <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
                         20+ Years
                       </Typography>
-                      <Typography sx={{ fontSize: "14px" }}>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >
                         of Legacy
                       </Typography>
                     </Box>
@@ -335,7 +360,7 @@ const LandingPage = () => {
                   <Divider
                     orientation="vertical"
                     flexItem
-                    sx={{ borderColor: "#555" }}
+                    sx={{ borderColor: "#555", borderStyle: "dashed" }}
                   />
 
                   <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -347,59 +372,76 @@ const LandingPage = () => {
                         alignItems: "center",
                       }}
                     >
-                      <img
-                        src="assets/sbi.svg"
-                        alt="Investor1"
-                        width="32"
-                        height="32"
-                        style={{
+                      <Box
+                        sx={{
+                          background: "#fff",
                           borderRadius: "50%",
+                          width: "32px",
+                          height: "32px",
                           position: "absolute",
                           left: 0,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
                         }}
-                      />
-                      <img
-                        src="assets/hdfc.svg"
-                        alt="Investor2"
-                        width="32"
-                        height="32"
-                        style={{
+                      >
+                        <img
+                          src="assets/sbi.svg"
+                          alt="Investor1"
+                          width="19.8"
+                          height="19.8"
+                        />
+                      </Box>
+                      <Box
+                        sx={{
+                          background: "#fff",
                           borderRadius: "50%",
+                          width: "32px",
+                          height: "32px",
                           position: "absolute",
                           left: 18,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
                         }}
-                      />
+                      >
+                        <img
+                          src="assets/hdfc.svg"
+                          alt="Investor2"
+                          width="19.8"
+                          height="19.8"
+                        />
+                      </Box>
                     </Box>
                     <Box sx={{ ml: 1 }}>
-                      <Typography sx={{ fontSize: "14px" }}>Top 35</Typography>
-                      <Typography sx={{ fontSize: "14px" }}>AMCs</Typography>
+                    <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >Top 35</Typography>
+                      <Typography
+                        sx={{
+                          ...amfiStyle,
+                        }}
+                      >AMCs</Typography>
                     </Box>
                   </Box>
                 </Box>
               )}
             </Grid>
-            <Grid size={{ xs: 12, md: 5 }}>
-              <Box sx={{ textAlign: "center" }}>
-                <Box
-                  component="img"
-                  src="assets/thumbUp.svg"
-                  sx={{
-                    maxWidth: "100%",
-                    maxHeight: "540px",
-                    borderRadius: "20px",
-                  }}
-                />
-                {/* <img
-                  src="assets/thumbUp.svg"
-                  alt="Thumbs Up Guy"
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "540px",
-                    borderRadius: "20px",
-                    
-                  }}
-                /> */}
-              </Box>
+            <Grid
+              size={{ xs: 12, md: 6 }}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <Box
+                component="img"
+                src="assets/thumbUp.svg"
+                sx={{
+                  maxWidth: "100%",
+                  maxHeight: "540px",
+                  borderRadius: "20px",
+                }}
+              />
             </Grid>
           </Grid>
         </Container>

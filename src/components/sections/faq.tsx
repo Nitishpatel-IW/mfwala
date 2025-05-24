@@ -38,7 +38,7 @@ function Faq() {
     <>
       <Box
         style={{
-          padding: "100px 20px",
+          padding: "150px 20px",
           display: "flex",
           justifyContent: "center",
           background: `
@@ -85,7 +85,7 @@ function Faq() {
                 }}
                 onClick={() => toggleFaq(index)}
               >
-                <Typography style={{ fontWeight: 600, fontSize: "16px", margin: 0 }}>
+                <Typography style={{ fontWeight: activeIndex === index ? 800:600, fontSize: "16px", margin: 0,lineHeight:"30px" }}>
                   {item.question}
                 </Typography>
                 <div
@@ -106,7 +106,7 @@ function Faq() {
               </div>
               {activeIndex === index && (
                 <Typography
-                  style={{ marginTop: "12px", fontSize: "14px", color: "#555" }}
+                  sx={{ mt: "12px", fontSize: "14px", color: "#666666",lineHeight:"22px",fontWeight:"400", pr:18}}
                 >
                   {item.answer}
                 </Typography>
@@ -115,7 +115,7 @@ function Faq() {
           ))}
         </div>
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center", mb: 15, px: 3 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mb: 18.75, px: 3 }}>
         <Box
           sx={{
             display: "flex",
@@ -123,7 +123,7 @@ function Faq() {
             alignItems: "center",
             justifyContent: "center",
             gap: 8,
-            pt: 5,
+            pt: { xs: 7, md: 12 },
             px: 2,
             backgroundColor: "#C1F901",
             borderRadius: 3,
@@ -145,10 +145,10 @@ function Faq() {
             <img
               src="assets/Logo_1.svg"
               alt="MW Logo"
-              style={{ width: "100%", height: "auto", }}
+              style={{ width: "100%", height: "auto",borderRadius:"8px" }}
             />
           </Box>
-          <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ textAlign: "center",display:"flex", alignItems:"flex-end" }}>
             <img
               src="assets/Mobile.svg"
               alt="QR phone"
@@ -160,8 +160,9 @@ function Faq() {
             <Typography
               sx={{
                 fontSize: { xs: "24px", md: "40px" },
-                fontWeight: "500",
+                fontWeight: "800",
                 mb: 2,
+                lineHeight: { xs: "30px", md: "44px" },
               }}
             >
               Start your journey <br /> Download now

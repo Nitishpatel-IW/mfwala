@@ -6,7 +6,7 @@ function SimpleSteps() {
       sx={{
         display: "flex",
         justifyContent: "center",
-        padding: "70px 20px 20px 0",
+        padding: "200px 20px 20px 0",
         background: `
   radial-gradient(circle at 10% 40%, #5AC8FA38, transparent 200px),
   radial-gradient(circle at 90% 65%, #FF950030, transparent 200px),
@@ -21,7 +21,7 @@ function SimpleSteps() {
           maxWidth: "80%",
           display: { xs: "block", md: "flex" },
           flexDirection: { xs: "column", md: "row-reverse" },
-          gap: 20,
+          gap: 15,
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -46,11 +46,11 @@ function SimpleSteps() {
         <Box sx={{ flexWrap: "wrap", maxWidth: "470px", pt: 3 }}>
           <Typography
             sx={{
-              fontSize: "30px",
-              fontWeight: "500",
-              pr: { xs: 2, md: 18 },
+              fontSize: "40px",
+              fontWeight: "800",
+              pr: { xs: 2, md: 12 },
               pb: 3,
-              lineHeight: 1.3,
+              lineHeight: "48px",
             }}
           >
             Get started in just 3 simple steps.
@@ -68,7 +68,7 @@ function SimpleSteps() {
                 aspectRatio: "1/1",
               }}
             />
-            <Typography sx={{ fontSize: "14px", color: "#666" }}>
+            <Typography sx={{ fontSize: "14px", color: "#666",fontWeight:"400",letterSpacing:"0.25px",pr:6 }}>
               <strong style={{ color: "#1A1A1A" }}>Set Your Goal :</strong>{" "}
               Choose a goal like a new house, your child’s future, or early
               retirement.
@@ -89,7 +89,7 @@ function SimpleSteps() {
                 aspectRatio: "1/1",
               }}
             />
-            <Typography sx={{ fontSize: "14px", color: "#666" }}>
+            <Typography sx={{ fontSize: "14px", color: "#666",fontWeight:"400",letterSpacing:"0.25px",pr:6 }}>
               <strong style={{ color: "#1A1A1A" }}>Select A Basket:</strong>{" "}
               Pick a curated fund basket according to your risk profile.
             </Typography>
@@ -109,7 +109,7 @@ function SimpleSteps() {
                 aspectRatio: "1/1",
               }}
             />
-            <Typography sx={{ fontSize: "14px", color: "#666" }}>
+            <Typography sx={{ fontSize: "14px", color: "#666",fontWeight:"400",letterSpacing:"0.25px",pr:6 }}>
               <strong style={{ color: "#1A1A1A" }}>Make Payment :</strong>{" "}
               Complete your payment online. Your investment journey begins
               instantly.
@@ -121,11 +121,12 @@ function SimpleSteps() {
               backgroundColor: "#C1F900",
               color: "#1A1A1A",
               fontSize: "14px",
-              px: 4.5,
-              py: 1.1,
+              px: 4,
+              py: 1.5,
               textTransform: "none",
               borderRadius: "6px",
               whiteSpace: "nowrap",
+              boxShadow: "none",
             }}
           >
             Start Investing Today

@@ -9,7 +9,7 @@ function Footer() {
       sx={{
         backgroundColor: "#0D0D0D",
         px: { xs: 2, md: 0 },
-        pt: { xs: 4, md: 10 },
+        pt: { xs: 4, md: 12.5 },
         pb: { xs: 4, md: 4 },
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
@@ -22,17 +22,18 @@ function Footer() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: 2,
           pl: { xs: 0, md: 15 },
+          lineHeight: "120%",
           alignItems: { xs: "center", md: "flex-start" },
         }}
       >
         <Typography
           sx={{
-            color: "#AAA9A9",
+            color: "#808080",
             fontSize: "18px",
             textAlign: { xs: "center", md: "left" },
-            fontWeight: 200,
+            fontWeight: 400,
+            lineHeight: "120%",
           }}
         >
           Contact us @
@@ -42,7 +43,8 @@ function Footer() {
             color: "#EFEDED",
             fontSize: { xs: "18px", md: "40px" },
             textAlign: { xs: "center", md: "left" },
-            fontWeight: 300,
+            fontWeight: 200,
+            lineHeight: "120%",
           }}
         >
           Support@mutualfundwala.com
@@ -76,30 +78,30 @@ function Footer() {
             gap: 2,
             flexWrap: "wrap",
             justifyContent: { xs: "center", md: "flex-start" },
+            alignItems: "center",
+            mt: { xs: 0, md: 8 },
           }}
         >
-          <Typography sx={{ color: "#AAA9A9", fontSize: "15px" }}>
+          <Typography sx={{ color: "#808080", fontSize: "15px" }}>
             ©Copyright 2025
           </Typography>
           <Divider
             orientation="vertical"
-            flexItem
-            sx={{ bgcolor: "#C1F900" }}
-          />
-          <Typography sx={{ color: "#AAA9A9", fontSize: "15px" }}>
+            sx={{ bgcolor: "#C1F900", height: "12px" }}
+          ></Divider>
+          <Typography sx={{ color: "#808080", fontSize: "15px" }}>
             Privacy Policy
           </Typography>
           <Divider
             orientation="vertical"
-            flexItem
-            sx={{ bgcolor: "#C1F900" }}
-          />
+            sx={{ bgcolor: "#C1F900", height: "12px" }}
+          ></Divider>
           <Typography
             onClick={() => {
               navigate("/terms");
               window.scrollTo(0, 0);
             }}
-            sx={{ color: "#AAA9A9", fontSize: "15px", cursor: "pointer" }}
+            sx={{ color: "#808080", fontSize: "15px", cursor: "pointer" }}
           >
             Terms & Condition
           </Typography>
@@ -108,20 +110,21 @@ function Footer() {
 
       <Box
         sx={{
-          mt: { xs: 4, md: 7 },
+          mt: { xs: 4, md: 2 },
           display: { xs: "block", md: "flex" },
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center",
-          gap: 6,
+          alignItems: "flex-start",
+          gap: 9,
         }}
       >
         {!isSmallScreen && (
           <Box
             sx={{
               display: "flex",
-              gap: 2,
-              mt: 2,
+              gap: 3,
+              mt: 2.5,
+              pl: { xs: 0, md: 5 },
             }}
           >
             <img src="assets/facebook.svg" alt="facebook" width={20} />
@@ -131,9 +134,8 @@ function Footer() {
         )}
         <Box
           sx={{
-            maxHeight: { xs: "162px", md: "203px" },
-            maxWidth: { xs: "162px", md: "203px"
-             },
+            maxHeight: { xs: "162px", md: "300px" },
+            maxWidth: { xs: "162px", md: "303px" },
           }}
         >
           <Box

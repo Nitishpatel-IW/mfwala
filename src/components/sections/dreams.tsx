@@ -52,8 +52,8 @@ function Dreams() {
   return (
     <Box
       textAlign="center"
-      pt={12}
-      pb={4}
+      pt={{xs:10,md:18}}
+      pb={10}
       px={{ xs: 4, sm: 8, md: 11 }}
       style={{
         background: `
@@ -67,14 +67,14 @@ function Dreams() {
     >
       <Typography
         variant="h4"
-        fontWeight="500"
+        fontWeight="800"
         gutterBottom
-        fontSize={40}
+        fontSize={{ xs: "30px", md: "40px" }}
         color="#1A1A1A"
       >
         Invest for Your Dreams
       </Typography>
-      <Typography variant="subtitle1" color="#666666" mb={4} fontSize={16}>
+      <Typography variant="subtitle1" color="#666666" mb={4} sx={{fontSize:{xs:"14px",md:"16px"},letterSpacing:"0.25px"}}>
         Never Lose Track Of Your Goals With Our Daily Reports On Your
         Investments
       </Typography>
@@ -107,6 +107,7 @@ function Dreams() {
             <Paper
               elevation={0}
               sx={{
+                backgroundImage:"url(/assets/Dots.svg)",
                 backgroundColor: goal.bgColor,
                 borderRadius: 3,
                 border: `1px solid ${darkenHex(goal.bgColor, 20)}`,
@@ -125,6 +126,7 @@ function Dreams() {
                   alignItems: "center",
                   justifyContent: "center",
                   margin: "0 auto 16px",
+                  
                 }}
               >
                 <img
@@ -133,10 +135,10 @@ function Dreams() {
                   style={{ width: 32, height: 32 }}
                 />
               </Box>
-              <Typography variant="body1" fontWeight="550" color="#1A1A1A" fontSize={16}>
+              <Typography variant="body1" fontWeight="700" color="#1A1A1A" fontSize={16} sx={{ lineHeight: "20px" }} >
                 {goal.title}
               </Typography>
-              <Typography variant="body1" fontWeight="550" color="#1A1A1A" fontSize={16}>
+              <Typography variant="body1" fontWeight="700" color="#1A1A1A" fontSize={16} sx={{ lineHeight: "20px" }}>
                 {goal.subtitle}
               </Typography>
             </Paper>
@@ -147,16 +149,17 @@ function Dreams() {
       <Button
         variant="contained"
         sx={{
-          mt: 4.5,
+          mt: 4,
           backgroundColor: "#C1F900",
           color: "#1A1A1A",
           fontSize: "14px",
-          px: 4.5,
-          py: 1.1,
+          px: 4,
+          py: 1.8,
           textTransform: "none",
           borderRadius: "6px",
           flexWrap: "nowrap",
-          fontWeight: "600",
+          fontWeight: "800",
+          boxShadow: "none",
         }}
       >
         Start Investing Today
